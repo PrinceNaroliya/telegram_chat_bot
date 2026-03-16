@@ -1,3 +1,6 @@
 venv/
 .env
 __pychache__/
+*.txt
+
+!requirements.txt
