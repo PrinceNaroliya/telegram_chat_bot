@@ -46,8 +46,7 @@ async def handle_msg(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await update.message.reply_text("Kuch toh gadbad hai!")
 
 if __name__ == '__main__':
-    token = "8696298344:AAHApkHMx8WFtFP8uI96E4wK5tq2Src5SJY"
-    app = ApplicationBuilder().token(token).build()
+    app = ApplicationBuilder().token(os.getenv("token")).build()
     
     msg_handler = MessageHandler(filters.TEXT & (~filters.COMMAND), handle_msg)
     app.add_handler(msg_handler)
